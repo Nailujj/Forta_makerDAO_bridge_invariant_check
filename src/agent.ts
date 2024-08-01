@@ -58,7 +58,6 @@ export function provideHandleBlock(
           findings.push(result);
         }
       } else {
-        //Listen to alerts
         const alerts = await getAlerts({
           botIds: [BOT_ID],
           alertId: "L1-BLOCK-CHECK-ESCROWS",
