@@ -1,9 +1,9 @@
 {
-  "name": "makerDAO-bridge-invariant-checker",
-  "displayName": "MackerDAO Bridge Invariant Checker",
+  "name": "makerdao-bridge-invariant-checker",
+  "displayName": "MakerDAO Bridge Invariant Checker",
   "version": "0.0.1",
-  "repository": "",
-  "licenseUrl": "",
+  "repository": "https://github.com/Nailujj/Forta_makerDAO_bridge_invariant_check/",
+  "licenseUrl": "https://github.com/Nailujj/Forta_makerDAO_bridge_invariant_check/license.md",
   "chainIds": [
     1,
     10,
