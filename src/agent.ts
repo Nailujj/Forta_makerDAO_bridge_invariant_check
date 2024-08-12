@@ -41,7 +41,7 @@ export function provideHandleBlock(provider: ethers.providers.Provider, getAlert
       } else {
         const alerts = await getAlerts({
           botIds: [BOT_ID],
-          alertId: "L1-BLOCK-CHECK-ESCROWS",
+          alertId: "balance-change-layer1",
           chainId: 1,
         });
 

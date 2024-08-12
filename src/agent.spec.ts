@@ -51,9 +51,9 @@ const getAlertInput = (): AlertInput => {
   let alertInput: AlertInput = {
     addresses: [createAddress("0x1234")],
     alertId: "balance-change-layer1",
-    description: "L1 escrow DAI supply is low",
+    description: "escrow-balance-arbitrum: ${arbitrumBalance}, escrow-balance-optimism: ${optimismBalance}",
     findingType: "Info",
-    name: "L1_ESCROW_ALERT",
+    name: "Combined DAI balance of Optimism and Arbitrum MakerDao escrows on layer 1",
     severity: "Info",
     alertDocumentType: "Alert",
     source: {

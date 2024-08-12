@@ -10,12 +10,10 @@ export const getL1Finding = async (
   previousBalances: PreviousBalances
 ): Promise<Finding[]> => {
   // Return type changed to Promise<Finding[]>
-  const arbitrumBalance: BigNumber = await daiContract.balanceOf(escrowAddressArbitrum, {
-    blockTag: blockNumber,
-  });
-  const optimismBalance: BigNumber = await daiContract.balanceOf(escrowAddressOptimism, {
-    blockTag: blockNumber,
-  });
+  const [arbitrumBalance, optimismBalance] = await Promise.all([
+    daiContract.balanceOf(escrowAddressArbitrum, { blockTag: blockNumber }),
+    daiContract.balanceOf(escrowAddressOptimism, { blockTag: blockNumber }),
+  ]);
 
   if (
     !BigNumber.from(previousBalances.prevArbitrumBalance).eq(BigNumber.from(arbitrumBalance)) ||
